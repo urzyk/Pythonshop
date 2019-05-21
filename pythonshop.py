@@ -37,6 +37,10 @@ def lista():
     for plik in os.listdir("."):
         if plik.endswith(".jpg"):
             print(plik)
+          
+def pokaz(plik):
+    plik.show()
+    print(colored("Obraz wyświetlony!", "green"))
 
                                             #TUTAJ WRZUCAMY FUNKCJE#
 
@@ -79,8 +83,8 @@ while True:
     funkcja=menu()
 
     if funkcja=="pokaż":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
-
+        pokaz(obraz)                      
+     
     elif funkcja=="obróć":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
