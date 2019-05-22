@@ -44,9 +44,13 @@ def pokaz(plik):
      
 def zapisz(plik, nazwa):
     plik.save(nazwa)
-    print(colored("Zapisano plik!", "green"))
-                                            #TUTAJ WRZUCAMY FUNKCJE#
+    print(colored("Zapisano plik!", "green"))    #TUTAJ WRZUCAMY FUNKCJE#
 
+ def skaluj(plik, szerokosc, wysokosc):
+    plik=plik.resize([szerokosc, wysokosc])
+    print(colored("Przeskalowano!", "green"))
+    return plik
+     
 #zmienne globalne
 lista_dostepnych_plikow=[]
 
@@ -92,7 +96,12 @@ while True:
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
     elif funkcja=="skaluj":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+        print("Wprowadź szerokość obrazu: ", end='')
+        szerokosc=int(input())
+        print("Wprowadź wysokość obrazu: ", end='')
+        wysokosc=int(input())
+        obraz=skaluj(obraz, szerokosc, wysokosc)
+                                            
 
     elif funkcja=="czarno-biały":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
