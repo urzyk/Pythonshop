@@ -41,6 +41,11 @@ def lista():
 def pokaz(plik):
     plik.show()
     print(colored("Obraz wyświetlony!", "green"))
+     
+def obroc(plik, stopnie):
+    plik=plik.rotate(stopnie)
+    print(colored("Obrócono!", "green"))
+    return plik
 
                                             #TUTAJ WRZUCAMY FUNKCJE#
 
@@ -86,7 +91,9 @@ while True:
         pokaz(obraz)                      
      
     elif funkcja=="obróć":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+        print("Wprowadź liczbę stopni: ", end='')
+        stopnie=int(input())
+        obraz=obroc(obraz, stopnie)                            
 
     elif funkcja=="skaluj":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
