@@ -40,6 +40,21 @@ def lista():
           
 def pokaz(plik):
     plik.show()
+
+    print(colored("Obraz wyświetlony!", "green"))
+     
+
+def obroc(plik, stopnie):
+    plik=plik.rotate(stopnie)
+    print(colored("Obrócono!", "green"))
+    return plik
+
+
+def zapisz(plik, nazwa):
+    plik.save(nazwa)
+    print(colored("Zapisano plik!", "green"))
+   
+
     print(colored("Obraz wyświetlony!", "green")
 
 def czarno_bialy(plik):
@@ -96,13 +111,23 @@ while True:
         pokaz(obraz)                      
      
     elif funkcja=="obróć":
+
+        print("Wprowadź liczbę stopni: ", end='')
+        stopnie=int(input())
+        obraz=obroc(obraz, stopnie)                            
+
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+
 
     elif funkcja=="skaluj":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
     elif funkcja=="czarno-biały":
+
+        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+
         obraz=czarno_bialy(obraz)                         
+
 
     elif funkcja=="zapisz":
         print("Wprowadź nazwę pliku (opcjonalnie z rozszerzeniem): ", end='')
