@@ -173,25 +173,17 @@ def obroc(plik, stopnie):
 def zapisz(plik, nazwa):
     plik.save(nazwa)
     print(colored("Zapisano plik!", "green"))
-   
-
-    print(colored("Obraz wyświetlony!", "green")
 
 def czarno_bialy(plik):
     plik=plik.convert("L")
     print(colored("Usunięto kolory!", "green"))
     return plik
 
-     
-def zapisz(plik, nazwa):
-    plik.save(nazwa)
-    print(colored("Zapisano plik!", "green"))
-
 def wyjdz():
     print("\n")
     print(colored("Dziękujemy za używanie Pythonshop!", "cyan"))
     input()
-    exit()                                            #TUTAJ WRZUCAMY FUNKCJE#
+    exit()
 
 #zmienne globalne
 lista_dostepnych_plikow=[]
