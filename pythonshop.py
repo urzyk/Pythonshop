@@ -52,7 +52,11 @@ def zapisz(plik, nazwa):
     plik.save(nazwa)
     print(colored("Zapisano plik!", "green"))
 
-                                            #TUTAJ WRZUCAMY FUNKCJE#
+def wyjdz():
+    print("\n")
+    print(colored("Dziękujemy za używanie Pythonshop!", "cyan"))
+    input()
+    exit()                                            #TUTAJ WRZUCAMY FUNKCJE#
 
 #zmienne globalne
 lista_dostepnych_plikow=[]
@@ -76,7 +80,7 @@ while True:
         lista()
 
     elif wybor=="wyjdź":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+          wyjdz()                           
 
     elif wybor in lista_dostepnych_plikow:
         obraz=Image.open(wybor)
@@ -110,7 +114,8 @@ while True:
         zapisz(obraz, output_nazwa)
                            
     elif funkcja=="wyjdź":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+          wyjdz()
+                           
 
     else:
         print(colored("Błędna funkcja!", "red"))
