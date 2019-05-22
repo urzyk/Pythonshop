@@ -41,6 +41,10 @@ def lista():
 def pokaz(plik):
     plik.show()
     print(colored("Obraz wyświetlony!", "green"))
+     
+def zapisz(plik, nazwa):
+    plik.save(nazwa)
+    print(colored("Zapisano plik!", "green"))
 
                                             #TUTAJ WRZUCAMY FUNKCJE#
 
@@ -95,7 +99,9 @@ while True:
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
     elif funkcja=="zapisz":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+        print("Wprowadź nazwę pliku (opcjonalnie z rozszerzeniem): ", end='')
+        output_nazwa=input()
+        zapisz(obraz, output_nazwa)
 
     elif funkcja=="wyjdź":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
