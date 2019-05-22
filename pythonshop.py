@@ -40,11 +40,18 @@ def lista():
           
 def pokaz(plik):
     plik.show()
-    print(colored("Obraz wyświetlony!", "green"))
+    print(colored("Obraz wyświetlony!", "green")
+
+def czarno_bialy(plik):
+    plik=plik.convert("L")
+    print(colored("Usunięto kolory!", "green"))
+    return plik
+
      
 def zapisz(plik, nazwa):
     plik.save(nazwa)
     print(colored("Zapisano plik!", "green"))
+
                                             #TUTAJ WRZUCAMY FUNKCJE#
 
 #zmienne globalne
@@ -95,7 +102,7 @@ while True:
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
     elif funkcja=="czarno-biały":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+        obraz=czarno_bialy(obraz)                         
 
     elif funkcja=="zapisz":
         print("Wprowadź nazwę pliku (opcjonalnie z rozszerzeniem): ", end='')
