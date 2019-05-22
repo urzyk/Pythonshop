@@ -42,6 +42,10 @@ def pokaz(plik):
     plik.show()
     print(colored("Obraz wyświetlony!", "green"))
 
+def czarno_bialy(plik):
+    plik=plik.convert("L")
+    print(colored("Usunięto kolory!", "green"))
+    return plik
                                             #TUTAJ WRZUCAMY FUNKCJE#
 
 #zmienne globalne
@@ -92,7 +96,7 @@ while True:
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
 
     elif funkcja=="czarno-biały":
-        break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
+        obraz=czarno_bialy(obraz)                         
 
     elif funkcja=="zapisz":
         break                              #MIEJSCE NA TWOJĄ FUNKCJĘ
